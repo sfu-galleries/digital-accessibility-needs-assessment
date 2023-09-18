@@ -51,7 +51,36 @@
             max-width: 100%;
             height: auto;
         }
+        * {
+            box-sizing: border-box;
         }
+
+        /* Container for flexboxes */
+            .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+            /* Create four equal columns */
+            .column {
+            flex: 25%;
+            padding: 20px;
+            }
+
+            /* On screens that are 992px wide or less, go from four columns to two columns */
+            @media screen and (max-width: 992px) {
+            .column {
+                flex: 50%;
+            }
+            }
+
+            /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+            @media screen and (max-width: 600px) {
+            .row {
+                flex-direction: column;
+            }
+            }
+
         /* Gradient transparent - color - transparent */
         hr.style-two {
             border: 0;
@@ -501,36 +530,36 @@
                     <h3>2.5. Manuals and Onboarding</h3>
                 </a>
                 <p aria-hidden="true">Navigation tags: <span style="color:#B40202;">SFUGartsWorkers</span></p>
-                <p>WWhile manuals are important for onboarding, they are also a staff resource for tasks that are important but irregular. Additionally, manuals can provide an alternative way to access information for a variety of learners. It establishes a best practice and consistent way of doing things to help troubleshoot errors quicker, and it can help workers identify or overcome assumption and bias. In a manual, best practices can be explained or simply written out so that staff can focus on consistently providing what is needed for their audiences and customers in most cases, and not need to strategize a solution live every time. Certainly, manuals should be regularly reviewed, critiqued, and renewed, but an systems or procedures manual can help keep things consistent, and give staff agency to answer process questions consistent with institutional values, and not subject to the whims of the internet or assumption.</p>
-                <p>2 manuals were provided to the report's author to review for this needs assessment.
+                <p>While manuals are important for onboarding, they are also a staff resource for important but irregular tasks. Additionally, manuals can provide an alternative way to access information for various learners. It establishes a best practice and consistent way of doing things to help troubleshoot errors quicker, and it can help workers identify or overcome assumptions and biases. In a manual, best practices can be explained or written out so that staff can focus on consistently providing what is needed for their audiences and customers in most cases, and not need to strategize a solution live every time. Certainly, manuals should be regularly reviewed, critiqued, and renewed. Still, a systems or procedures manual can help keep things consistent, and give staff agency to answer process questions consistent with institutional values, and not subject to the whims of the internet or assumption.</p>
+                <p> Two manuals were provided to the report's author to review for this needs assessment.
                     <ul>
                         <li>SFU Galleries Website Manual</li>
                         <li>SFU Galleries Campaigner (Email/Newsletter) Manual</li>
                     </ul>
                 </p>
-                <p>Both of these manuals have been consulted to generate feedback for section 2.8 Email, and 2.9 Adobe CMS.</p>
-                <p> This chapter is focused on recommendations for the format of these manuals and how to make these digital assets more accessible, and to recommend a project to generate or review written documentation for processes that are either known only to current staff, or whose formal process documentions are in need of an update.</p>
+                <p>Both of these manuals have been consulted to generate feedback for section 2.8 Email and 2.9 Adobe CMS.</p>
+                <p> This chapter is focused on recommendations for the format of these manuals, how to make these digital assets more accessible, and how to recommend a project to generate or review written documentation for processes that are either known only to current staff or whose formal process documents require an update.</p>
                 <section><!--Manual Format Recommendations-->
                     <h4>2.5.1. Format</h4>
-                    <p>The PDF format is excellent to preserve style and formating, and when saved correctly, it can provide a small file size that is easy to share. However, PDFs are more difficult to update, and for assets such as manuals, which should be updated, if not annually, regularly to incorporate new knowledge, best practices, and software or hardware changes.</p>
+                    <p>The PDF format is excellent for preserving style and formatting, and when saved correctly, it can provide a small file size that is easy to share. However, PDFs are more difficult to update, and assets such as manuals should be updated, if not annually, regularly to incorporate new knowledge, best practices, and software or hardware changes.</p>
                     <p>PDFs are also inconsistently accessible for people with screen readers. </p>
-                    <p>It is recommended that any PDF manuals be converted back into a word processor file as the master file. Once updated, a dated PDF version of the manual can be created as an alternate format, saved within the same folder, but the word document is available for updates and changes, or should the PDF format not be accessible.</p>
-                    <p>Optional: Just has this report has been written in HTML to prioritize accessibility, and to allow for screen readers to be a priority group, HTML or other markup could be considered for SFU Galleries manuals. A wiki such as MediaWiki could be set up on the local network which could be accessed by staff through the VPN while remaining closed to the public. It would be searchable, and follow an accessible format that all SFU Galleries departments could use. Alternatively, since the SFU Galleries staff currently uses <a href="https://forum.asana.com/t/introducing-project-overview-project-brief-and-messages/105593" aria-label="Asana Project Overview feature information">Asana</a>, an operations project could be started with the Project Brief linking to manuals within the shared drive. Roles could be defined, and the messages system could be used during the year to make notes of manual updates that are needed, to leave a request for clarification, or to update staff when manuals are changed.</p>
-                    <p>For long training manuals, it can also be true that text is a barrier. Some people are better trained through listening and watching. Consider running manuals through a text to speech tools such as <a href="https://speechify.com/">Speechify</a> to ensure that things are following a natural order, and to allow staff, especially neurodiverse folks, alternative ways of learning.</p>
-                    <p>It's also worth running manuals through a readability tool such as the free <a href="https://hemingwayapp.com/">Hemingway App</a> or pro tools like <a href="https://app.readable.com">Readable.com</a>. Manuals should strive to be simple where understanding is the goal. Use simple language and short sentences. Expand all acronyms. A readability tool can help.</p>
-                    <p>It can be a great project for new staff, short term workers, interns, and students, to review existing manuals for programs that they aren't familiar with. Not only does it provide a space for co-learning, where they can develop a new skill, but it can also quickly identify places were the manual is not clear, or is missing information. This has been recommended as a project within the <a href="#colearning">2.6 Co-learning</a> section.</p>
-                    <p>For people for whom English is an additional language, having manuals available in an accessible, text-based format, can also make it easier for language translation tools to be used to help clarfify technical or industry specific language that is not immediately familiar to the new team member.</p>
-                    <p>Consider creating a manual template for all departments that follow the SFU Galleries style guide, and make it simple for people to seek out knowledge from other departments in a familiar way.</p>
-                    <p>Add descriptions for visuals and name how they connect to step-by-step text. Having fewer number of pages is less important than type size and an easy to follow order on a page. Use two columns maximum and consider stacking images with a centre justification and footnote or caption to describe the images purpose. </p>
+                    <p>It is recommended that any PDF manuals be converted back into a word processor file as the master file. Once updated, a dated PDF version of the manual can be created as an alternate format saved within the same folder. Still, the Word document is available for updates and changes, or if the PDF format is not accessible.</p>
+                    <p>Optional: Just as this report has been written in HTML to prioritize accessibility and allow screen readers to be a priority group, HTML or other markup could be considered for SFU Galleries manuals. A wiki such as MediaWiki could be set up on the local network, which staff could access through the VPN while remaining closed to the public. It would be searchable and follow an accessible format that all SFU Galleries departments could use. Alternatively, since the SFU Galleries staff currently uses <a href="https://forum.asana.com/t/introducing-project-overview-project-brief-and-messages/105593" aria-label="Asana Project Overview feature information">Asana</a>, an operations project could be started with the Project Brief linking to manuals within the shared drive. Roles could be defined, and the messages system could be used during the year to note necessary manual updates, leave a request for clarification, or update staff when manuals are changed.</p>
+                    <p>For long training manuals, it can also be true that text is a barrier. Some people are better trained through listening and watching. Consider running manuals through text-to-speech tools such as <a href="https://speechify.com/">Speechify</a> to ensure that things are following a natural order and to allow staff, especially neurodiverse folks, alternative ways of learning.</p>
+                    <p>It's also worth running manuals through a readability tool such as the free <a href="https://hemingwayapp.com/">Hemingway App</a> or pro tools like <a href="https://app.readable.com">Readable.com</a>. Manuals should strive to be simple, where understanding is the goal. Use simple language and short sentences. Expand all acronyms. A readability tool can help.</p>
+                    <p>It can be a great project for new staff, short-term workers, interns, and students to review existing manuals for programs they need to become more familiar with. It provides a space for co-learning, where they can develop a new skill, and it can quickly identify places where the manual is unclear or missing information. This has been recommended as a project within the <a href="#colearning">2.6 Co-learning</a> section.</p>
+                    <p>For people for whom English is an additional language, having manuals available in an accessible, text-based format can also make it easier for language translation tools to be used to help clarify technical or industry-specific language that is not immediately familiar to the new team member.</p>
+                    <p>Consider creating a manual template for all departments that follow the SFU Galleries style guide and make it simple for people to seek out knowledge from other departments in a familiar way.</p>
+                    <p>Add descriptions for visuals and name how they connect to the step-by-step text. Having fewer pages is less important than type size and an easy-to-follow order on a page. Use two columns maximum and consider stacking images with a centre justification and footnote or caption to describe the images' purpose. </p>
                 </section>
-                <section><!--Manual Mainteance Project-->
+                <section><!--Manual Maintenance Project-->
                     <h4>2.5.2. Manuals Maintenance Project</h4>
-                    <p>Similar to the <a href="#fileMaintenanceProject">File Mainteance Project</a> day/week, it is recommended that scheduled time is made during the year for manuals updates. In year one, more time would be required to review existing manuals, and bring them up to date.</p>
-                    <p>In the initial phase, staff will be tasked in identifying all the existing manuals, and to place them in a shared folder within the server, or to create an alias link for department specific manuals that are better kept within relevant department folders. Consider making this  either a top level folder or contained within an onboarding or training folder. Administration and IT would consider whether individual manuals or a browser based (wiki) intranet would be sustainable.</p>
-                    <p>The second phase will schedule time for departments to prioritize manuals that need an update. It may be that manuals need to be developed from scratch and can be added to the project list. During this phase, students or interns could be invited to take on a specific project to document drafts.</p>
-                    <p>Once this stage is complete, a schedule for annual maintenance will be developed and added to shared calendars for current and new staff. This annual maintenance can include updates to existing manuals, or scheduling development of new manuals during the coming year..</p>
+                    <p>Similar to the <a href="#fileMaintenanceProject">File Maintenance Project</a> day/week, it is recommended that scheduled time is made during the year for manual updates. In year one, more time would be required to review existing manuals and update them.</p>
+                    <p>In the initial phase, staff will be tasked with identifying and placing all the existing manuals in a shared folder within the server or creating an alias link for department-specific manuals that are better kept within relevant department folders. Consider making this a top-level folder or contained within an onboarding or training folder. Administration and IT would consider whether individual manuals or a browser-based (wiki) intranet would be sustainable.</p>
+                    <p>The second phase will schedule time for departments to prioritize manuals that need an update. New manuals may need to be developed from scratch, which can be added to the project list. Students or interns could be invited to take on a specific project to document drafts during this phase.</p>
+                    <p>Once this stage is complete, a schedule for annual maintenance will be developed and added to shared calendars for current and new staff. This annual maintenance can include updates to existing manuals or scheduling development of new manuals during the coming year..</p>
                 </section>
-                <p>Specific action items for this projcet have been added to <a href="#actionItemsInternal">2.12 Action Items for Internal Systems</a></p>
+                <p>Specific action items for this project have been added to <a href="#actionItemsInternal">2.12 Action Items for Internal Systems</a></p>
                 <br />
             <!--END CHAPTER 2.5-->
             </section>
@@ -541,9 +570,9 @@
                 </a>
                 <p aria-hidden="true">Navigation tags: <span style="color:#B40202;">SFUGartsWorkers</span>, <span style="color:#00606B;">SFUGaudience</span>, <span style="color:#600067;">SFUGnetwork</span> </p>
                 <p>Some text about the project scope of this document.</p>
-                <p>Dedicate a professional development day specific to <a href="https://support.microsoft.com/en-us/training">Microsoft Office</a>. As the tool used by all SFU Gallery staff, making time to review the available training assets online invests in staff learning. Schedule a follow up meeting to allow staff members to <em>share something they learned</em>, even as pro users. By encouraging these kind of professional development activities, it can help staff identify their own biases ("I know how to use this product and don't need to do this"), and to ensure that the latest accessibility technology built into these programs is used to the fullest by all staff. Most software is updated regularly, and while tools such as Microsoft office are common in the professional work environment, a push to keep up with new tools and features is not.</p>
-                <p>Following the <a href="manualUpdates">manual update project</a> in year one, SFU Galleries could schedule a yearly co-learning event or themed staff meeting where departments share the major updates or items they learned or were refreshed about. Manuals that were identified as needing to happen could be written as a draft documentation project by students or interns, and then could be reviewed by departments to edit and ultimately adapt as training and department resources.  Consider reaching out creative writing or tech writing departments at SFU.</p>
-                <p>In onboarding, ask new staff to give feedback when using manuals as they are able to give an unbiased review on whether the content is useful.</p>
+                <p>Dedicate a professional development day specific to <a href="https://support.microsoft.com/en-us/training">Microsoft Office</a>. As the tool used by all SFU Gallery staff, making time to review the available training assets online invests in staff learning. Schedule a follow-up meeting to allow staff members to <em>share something they learned</em>, even as pro users. Encouraging this kind of professional development activities can help staff identify their own biases ("I know how to use this product and don't need to do this") and ensure that the latest accessibility technology built into these programs is used to the fullest by all staff. Most software is updated regularly, and while tools such as Microsoft Office are common in the professional work environment, a push to keep up with new tools and features is not.</p>
+                <p>Following the <a href="manualUpdates">manual update project</a> in year one, SFU Galleries could schedule a yearly co-learning event or themed staff meeting where departments share the major updates or items they learned or were refreshed about. New manuals could be written as a draft documentation project by students or interns and then reviewed by departments to edit and adapt as training and department resources. Consider reaching out to creative writing or tech writing departments at SFU.</p>
+                <p>In onboarding, ask new staff to give feedback when using manuals, as they can give an unbiased review on whether the content is useful.</p>
                 <p>Specific action items for this projcet have been added to <a href="#actionItemsInternal">2.12 Action Items for Internal Systems</a></p>
                 <br />
             <!--END CHAPTER 2.6-->
@@ -554,13 +583,14 @@
                     <h3>2.7. Contracts and agreements</h3>
                 </a>
                 <p aria-hidden="true">Navigation tags: <span style="color:#B40202;">SFUGartsWorkers</span>, <span style="color:#600067;">SFUGnetwork</span> </p>
-                <p>SFU Contracts staff contracts are not handled digitally -  <span style="color: red;">Kim: Is there a digital component/policy around SFU Staff contracts with SFU/SFU Galleries?</span>.</p>
-                <p>SFU Contacts between the institution and artists, as well as contract arts worker contracts are handled by SFU Galleries within their own budgets and administation. These contracts are templates that are managed by the director. Changes to this template do not need to be reviewed by board or SFU Administration.<span style="color: red;">Kim: Confirm</span> </p>
-                <p>SFU Galleries PAYMENT, e-Transfer.</p>
-                <p>SFU Galleries has existing templates for Supplier Contracts which have been approved by SFU Gallery, that is to say, they follow current national and provincial laws. These contracts were designed for commerical services, and can conflict with an independant workers, and is written with the expectation that SFU cannot be held liable. There is no space to shift within the current contract for a worker to confirm accessibility and to ensure that harm also does not come to the worker. While this does not have an easy solution, conversations around equity and inclusion within the current boilerplate began when the author of this report was brought into this project. While contract audits and reviews are a larger project, and fall outside of a digital needs assessment, it is worth being involved in this discussion, especially as SFU and other Universities across British Columbia, complete their Assessbility Plans associated with the new Accessible British Columbia act. Having digital access to contracts, centring bodies who may require digital access for payment, communication, and file sharing, and updating these agreements to be accessible in reading (providing simple word explainations with the intension to inform and promote fairness, not to confuse with inaccessible language), would be a feat indeed. 
-                <p>At present, files shared by contractors and offsite workers are to be sent via email, or to be physically mailed to the gallery. If is recommended that SFU Galleries research and decide on a file sharing system for external communication, both to provide a place for external files to be uploaded outside of email restrictions*, and to create consistency so that proceedures can be documented for onboarding.</p>
-                <p>Write down the contract expectations, and general templates with a plain work summary (to be approved by SFU) focused specifically on accessibility, and acknowleding access barriers to non-students, and non-commerical agreements.</p>
-                <p>Specific action items for this projcet have been added to <a href="#actionItemsInternal">2.12 Action Items for Internal Systems</a></p>
+                <p>Contracts and agreements are documents that many now expect to be able to handle digitally. Through signing software such as Adobe Acrobat, Dropbox sign, Docusign, etc., draft contracts can be provided for review and signed without needing a printer, fax machine, or in-person meeting. SFU Galleries maintains an Adobe Cloud subscription for all staff, which includes Adobe Sign. There would be no additional cost to standardize this use, and a manual should be created for onboarding and consistent use across departments. However, Adobe Sign is not always accessible to all, especially those who are Blind or have older technology incompatible with Adobe programs. It is recommended that a program such as <a href="https://www.docusign.com/blog/making-the-signing-experience-accessible-to-all">DocuSign</a> be considered either as the primary tool or backup for accessibility.</p>
+                <p>SFU Galleries has existing templates for Supplier Contracts, which Simon Fraser University has approved; that is to say, they follow current national and provincial laws. These contracts were designed for commercial services and were written with the understanding that SFU cannot be held liable. There is no space to shift within the current contract for a worker to confirm accessibility and to ensure that harm also does not come to the worker by SFU and its network. While this does not have an easy solution, conversations around equity and inclusion within the current boilerplate began when the author of this report was brought into this project. While contract audits and reviews are a larger project and fall outside of a digital needs assessment, it is worth being involved in this discussion, especially as SFU and other Universities across British Columbia complete their Accessibility Plans associated with the new Accessible British Columbia Act. Having digital access to contracts, centring bodies who may require digital access for payment, communication, and file sharing, and updating these agreements to be accessible (providing simple word explanations to inform and promote fairness, not to confuse with inaccessible language), would be a worthy project to pursue. </p>
+                <p>For accessible digital contracts, ensure that all draft contracts are created in Microsoft Office and then pass an <a href="https://support.microsoft.com/en-gb/office/improve-accessibility-with-the-accessibility-checker-a16f6de0-2f39-4a2b-8bd8-5ad801426c7f#:~:text=Select%20File%20and%20choose%20Info,Select%20Check%20for%20Issues.&text=Check%20Accessibility.,and%20shows%20the%20inspection%20results.">Accessibility Check</a>. A well-structured digital contract will be more easily navigated through assistive technology. Avoid PDFs unless they meet ISO standards, and even then, it is best to send drafts as Microsoft Office or plain text files for review.</p>
+                <p>Draft plain language summary documents to go with larger, common contracts to create a place for artists and contractors to ask questions. These are not legally binding documents, but they give both the SFU Gallery staff and external signing partners a chance to confirm they understand what is being agreed to honestly and to recognize that legal language represents a barrier to anyone not regularly engaged in the legal process. These work summaries are not agreements but an accessibility tool (this must be stated specifically).</p>
+                <p>Agreements made specifically between SFU Galleries and contractors may allow for more flexibility; however, SFU Galleries is still connected to the university, and agreements must be acceptable to SFU legal before an agreement can be made. SFU Galleries handles contracts between the institution, artists, and arts workers within their own budgets and administration. These contracts are managed and ultimately signed by the director. Changes to the SFU Gallery contract template are reviewed by SFU procurement.<span style="color: red;">Kim: Confirm</span> </p>
+                <h4>2.7.1. SFU Galleries payments, e-Transfer.</h4>
+                <p>It has been documented a few times that attempts to have e-transfers set up by SFU have failed, and physical cheques have been mailed. This creates a barrier for those with physical challenges and for whom getting to a bank incurs a cost. This note is to flag the confusion around how to set up eTransfers with SFU properly, and a review of this process, followed by the creation of a procedures manual which can be shared with external contractors, is highly recommended.</p>                
+                <p>Specific action items for this project have been added to <a href="#actionItemsInternal">2.12 Action Items for Internal Systems</a></p>
                 <br />
             <!--END CHAPTER 2.7-->
             </section>
@@ -570,9 +600,97 @@
                     <h3>2.8. Emails and footers</h3>
                 </a>
                 <p aria-hidden="true">Navigation tags: <span style="color:#B40202;">SFUGartsWorkers</span>, <span style="color:#00606B;">SFUGaudience</span>, <span style="color:#600067;">SFUGnetwork</span> </p>
-                <p>Some text about the project scope of this document.</p>
-                <p>Do Staff use Outlook for their mail? Do they know about the MailTip feature?</p>
-                <p>When was the last time everyone got a referesh on Word tools? Is that a responsibility of the office or the workers?</p>
+                <p>SFU Galleries staff mostly consistent email footers. All footers contain 3 upcoming exhibitions or projects, as well as a link to the sfugalleries.ca website. There is some inconsistency around the contact information, and footers use very small fonts with low contrast colour (fig 2.8a), except for one staff (see fig 2.8a-1, and fig 2.8a-4) who uses black for contact information, and blue links. It is recommended that all staff shift to this format. Any grey text should be either replaced with black, or moved to a grey with a 1:7 contrast ratio. It is also recommended that the font size be a minimum of 12 for all footers. Remove all underlined text that is not a link (see fig 2.8c for recommended format).</p>
+                <div class="well">
+                    <p>Fig 2.8a: 4 email footers from 3 SFU Staff across 4 months.</p>
+                        <div class="row">
+                            <div class="column">
+                                <figure>
+                                    <img src="./media/emailFooter-June-staff1.png" alt="Email footer from June 2023, Staff 1" class="responsive" />
+                                    <figcaption>2.8a-1: June 2023, Staff 1</figcaption>
+                                </figure>
+                            </div>
+                            <div class="column">
+                                <figure>
+                                    <img src="./media/emailFooter-July-staff2.png" alt="Email footer from July 2023, Staff 2" class="responsive"/>
+                                    <figcaption>2.8a-2: July 2023, Staff 2</figcaption>
+                                </figure>    
+                            </div>
+                            <div class="column">
+                                <figure>
+                                    <img src="./media/emailFooter-August-staff3.png" alt="Email footer from August 2023, Staff 3" class="responsive" />
+                                    <figcaption>2.8a-3: Aug 2023, Staff 3</figcaption>
+                                </figure>
+                            </div>
+                            <div class="column">
+                                <figure>
+                                    <img src="./media/emailFooter-Sept-staff1.png" alt="Email footer from Sept 2023, Staff 1" class="responsive" />
+                                    <figcaption>2.8a-4: Sept 2023, Staff 1</figcaption>
+                                </figure> 
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+                <p></p>
+                <p>Some staff have begun to adopt the addition of personal pronouns, but there is no consistent placement. The option to add personal pronouns will be a decision made by the staff, or as a act of allyship by the Institution, but the position should be consistent. It is recommended that it directly follows the name and post-nominal letters. The option to include the lable "pronoun" is options (but should be consistent across all profiles that indicate their pronouns (fig 2.8b).</p>
+                <div class="well">
+                    <figure>
+                        <figcaption>Fig 2.8b: 2 examples of pronouns within a signature.</figcaption>
+                        <p><b>Crowley Breem</b>, PhD (they/them, ze/zer)</p>
+                        <p><b>Pelly Domber</b>, MI (she/her)</p>
+                    </figure>
+                </div>
+                <p>It is recommended that a clean version of the email template be created with static links, as some of the source code within current email footers contains old links. Remove capitals, and use full abreviations for dates (ie: Sept, not Sep, etc.). Ensure location links (outside of contact.html page) are up to date and go to contact pages with address or emails. When a landing page is not available for an external location, link to a map (see fig 2.8c, Belzberg library)</p>
+                <div class="well">
+                    <figure>
+                        <figcaption>Fig 2.8c: Recommended Email Footer Template</figcaption>
+                        <hr />
+                        <p><strong>Lake Gordon</strong>, MBA (he/him)<br />
+                        Technology and Access Manager<br />
+                        Direct: 778-888-88X8</p>
+
+                        <p><b>SFU Galleries</b><br />
+                        <a href="https://sfugalleries.ca/">website</a>, <a href="https://goo.gl/maps/FZt1sNeaycHbsfgW6">map</a><br />
+                        ----------</p>
+                        <p>
+                            <strong>
+                                <a href="http://www.sfu.ca/galleries/audain-gallery/autofictional-mfa-exhibition.html">
+                        Autofictional: MFA Graduating Exhibition and Festival</a>
+                            </strong><br />
+                            Sept 6 - Sept 23, 2023<br />
+                            <a href="http://www.sfu.ca/galleries/contact.html">Audain Gallery, Vancouver</a>
+                        </p>
+                        <p>
+                            <strong>
+                                <a href="http://www.sfu.ca/galleries/sfu-gallery/gibson-art-museum.html">
+                        Introducing the Gibson Art Museum</a>
+                            </strong><br />
+                            Sept 19 - Sept 30, 2023<br />
+                            <a href="http://www.sfu.ca/galleries/contact.html">SFU Gallery, Burnaby</a>
+                        </p>
+                        <p>
+                            <strong>
+                                <a href="https://www.sfu.ca/galleries/teck-gallery/who-claims-abstraction-.html">
+                                    Francisco-Fernando Granados: who claims abstraction?</a>
+                            </strong><br />
+                            Jan 20 - Dec 16, 2023<br />
+                            <a href="http://www.sfu.ca/galleries/contact.html">Teck Gallery, Vancouver</a>
+                        </p>
+                        <p>
+                            <strong>
+                                <a href="http://www.sfu.ca/galleries/special-projects/current/echoesfromthecollectionbelzberg.html">
+                                    who claims abstraction? Echoes from the SFU Art Collection</a>
+                            </strong><br />
+                            Jun 9 - Dec 16, 2023<br />
+                            <a href="https://www.lib.sfu.ca/about/branches-depts/belzberg/about/about">SFU Belzberg Library, Vancouver</a>
+                        </p>
+                        <p>----------</p>
+                        <p>
+                            <a href="http://www.sfugalleries.ca">sfugalleries.ca</a>
+                        </p>
+                </figure>
+            </div>
+            <p>SFU Galleries uses Microsoft Outlook on their desktops. There is inconsistent use of outlook on mobile devices, and many employees use the default mail browser on their phones.It is recommended that the Microsoft Outlook tool be downloaded onto mobile devices used for SFU Galleries work (whether personal device or institutional asset). This will allow for consisent message appearances, a separation from work and person messages, and make use of accessibility tools available within Microsoft Office. In particular, all staff should turn on and familiarize themselves with the <a href="https://support.microsoft.com/en-gb/office/improve-accessibility-with-the-accessibility-checker-a16f6de0-2f39-4a2b-8bd8-5ad801426c7f">Accessibility Checker</a> within Outlook.</p>
                 <p>Specific action items for this projcet have been added to <a href="#actionItemsInternal">2.12 Action Items for Internal Systems</a></p>
                 <br />
             <!--END CHAPTER 2.8-->
@@ -663,6 +781,9 @@
                             </li>
                             <li><div role="checkbox" aria-checked="false" tabindex="0">Provide staff meeting agendas within calendar invites which include a link to Zoom for captions and teleconference options, and to practice writing accessible calendar events.</div></li>
                             <li><div role="checkbox" aria-checked="false" tabindex="0">Create a manual project memo and circulate to staff. Choose a date, and ask that process manuals be consolidated into one shared folder by that time.</div></li>
+                            <li><div role="checkbox" aria-checked="false" tabindex="0">Review current digital contract procedures and policy. If none exist, document current procedures and decide on a single program and procedure for all staff. Consider using Adobe Sign (existing subscription) or use an <a href="https://www.docusign.com/blog/making-the-signing-experience-accessible-to-all">accessible document signing program such as DocuSign</a> for digital contracts (created in Microsoft Word).</div></li>
+                            <li><div role="checkbox" aria-checked="false" tabindex="0">Contact SFU Procurement about developing a plain language accessibility document for all boilerplate contracts to acknolwedge the barriers in legalize and immovable contract agreements.</div></li>
+                            <li><div role="checkbox" aria-checked="false" tabindex="0">Review the steps needed to set up e-Transfer for contractors and artists. Document this process.</div></li>
                             <li><div role="checkbox" aria-checked="false" tabindex="0">Schedule a procedures manual maintenance day/week (annual)</div>
                                 <ul>
                                     <li><div role="checkbox" aria-checked="false" tabindex="0">Have departments identify processes that need documentation (create).</div></li>
@@ -677,6 +798,9 @@
                                 </ul>
                             </li>
                             <li><div role="checkbox" aria-checked="false" tabindex="0">Formalize SFU Galleries Working Offsite procedures into an operations procedures manual, begin steps for a Working Offsite Policy, and create an inventory of digital assets available and subscribed to for current staff. Move away from language "work from home". (large task)</div></li>
+                            <li><div role="checkbox" aria-checked="false" tabindex="0">Update all staff email footers to include higher contrast fonts, larger text sizes, consistent pronoun spaces, updated links, and consistent date abbreviation. </div></li>
+                            <li><div role="checkbox" aria-checked="false" tabindex="0">Encourage all staff to turn on Accessibility Checker within Outlook.</div></li>
+                            <li><div role="checkbox" aria-checked="false" tabindex="0">Encourage all staff to download outlook for their mobile devices (including phones) to seperate email from personal accounts, and to encourage a consistent look and access standards for professional emails.</div></li>
                         </ul>
                     </div>
                 <!--Checklist #1 ENDS-->
