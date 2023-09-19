@@ -6,12 +6,16 @@
     <meta name="author" content="Kay Slater">
     <style>
         /* CSS: No height property is set.*/
-        body{
+        body {
             font-family:Verdana, Geneva, Tahoma, Arial, sans-serif;
             line-height:1.5;
             font-size: 1rem;
             margin: 1.5em;
             max-width: 70em;
+        }
+        p, figure, .well {
+            overflow: hidden;
+            max-width: 80ch;
         }
         /* screen reader only content */
         .sr-only {
@@ -40,7 +44,7 @@
         /* content features or "the well" */
         .well {
             min-height: 20px;
-            padding: 1.5em;
+            padding: 2.5em;
             margin-bottom: 20px;
             background-color: #f5f5f5;
             border: 1px solid #e3e3e3;
@@ -61,13 +65,11 @@
             display: flex;
             flex-wrap: wrap;
         }
-
             /* Create four equal columns */
             .column {
-            flex: 25%;
+            flex: 50%;
             padding: 20px;
             }
-
             /* On screens that are 992px wide or less, go from four columns to two columns */
             @media screen and (max-width: 992px) {
             .column {
@@ -348,7 +350,6 @@
                         <li><a href="#SFUStudent">SFU Student - pending</a></li>
                         <li><a href="#SFUGalleriesStaff">SFU Galleries Staff</a></li>
                     </ol>
-                    <li><a href="#actionItemsMaster">Action Items, Master Rank</a></li>
                     <li><a href="#conclusion">Conclusion</a></li>
                     <li><a href="#supportMaterials">Appendix</a></li>
                 </li>
@@ -1031,7 +1032,7 @@
             <p>Continuing on the theme of a siloed approach, the Collections database is an unpolished gem isolated from the content on the SFU Galleries website except through a navigation link. Exhibitions and their assets are not contained in the database, nor are current and upcoming artists, and this causes a visitor to wonder if they haven't stumbled into a non-public part of the website. The collections team is excited at the prospect of beefing up existing object records to be more accessible and detailed and to explore how the collections and archive can be more engaging to both the SFU Galleries visitor and the serious researcher. While that content work is being done, it is recommended that the focus of the collections is downplayed within the SFU Galleries website and that a time of development, exploration and research be undertaken before the Collection is promoted to the community. A few content writing projects (with student participation) have been recommended, and there are co-learning opportunities that should be done with the collections, curation, and communications teams so that work is not repeated, and can be used in various places. Ultimately, an important question must be asked and answered by SFU Galleries: What is the scope of the SFU Collections Database, and who does it serve?</p>
             <p>It has been recommended by this report's author and team members at SFU Galleries that the CMS system is too robust and clunky for the needs of the public-facing cultural website. It is worth considering a move towards a CMS or restructuring within the existing CMS that prioritizes exploration and browsing. The integrations within the SFU.ca website present many challenges and easily confuse visitors in ways that might benefit SFU but not the galleries or the user. SFU Galleries is not SFU, and its website should reflect that. SFU Galleries needs to be focused on a visitor experience, whereas SFU needs to provide a huge wealth of information for a wide variety of users. Making this distinction will help SFU Galleries to better serve their audiences as a gallery and museum rather than as a department of SFU (regardless of how it is on paper).</p>
             <p>As SFU Galleries is going through a redesign process right now, the scope of this chapter is restricted to existing pages and content. Design feedback has been kept to a minimum, and the author of this audit is in discussion with the design firm and current staff to provide feedback in the early days of the redesign.</p>
-            <p>However, a major recommendation is that the website moves away from a physical site-specific content organization and moves towards one presented chronologically. SFU Galleries should consider more broad and simple categories, with fewer needs to click, with the topmost hierarchy being date, followed by exhibition or special project. Sub-taxonomies would be presented as links and tags familiar to a web user. They would encourage people to explore by a linked interest rather than requiring those interested to do more searches or make intuitive leaps of logic. For example, if an artist had previously worked with SFU for an event, workshop, exhibition, etc., it is up to the SFU Gallery staff to manually create links to other content the artist has worked on. Additionally, some items are located in the special projects or publications (sales) areas that are not listed (unless requested by the content manager) and require the visitor to be self-motivated to search for related content. The goal is to provide the end user with intuitive and low-effort options. While the design project is in development, it is recommended that the content team do an information architecture audit to identify content that could be connected and better served to visitors via tags and cross-linking.</p>
+            <p>However, a major recommendation is that the website moves away from a physical site-specific content organization and moves towards one presented chronologically. SFU Galleries should consider more broad and simple categories, with fewer needs to click, with the topmost hierarchy being date, followed by exhibition or special project. Subtopics or categories would be presented as links or tags familiar to a web user. They would encourage people to explore by a linked interest rather than requiring those interested to do more searches or make intuitive leaps of logic. For example, if an artist had previously worked with SFU for an event, workshop, exhibition, etc., it is up to the SFU Gallery staff to manually create links to other content the artist has worked on. Additionally, some items are located in the special projects or publications (sales) areas that are not listed (unless requested by the content manager) and require the visitor to be self-motivated to search for related content. The goal is to provide the end user with intuitive and low-effort options. While the design project is in development, it is recommended that the content team do an information architecture audit to identify content that could be connected and better served to visitors via tags and cross-linking.</p>
             <p>It is becoming increasingly common for visitors to access content through an infinite scroll (scroll down and more context is listed) or navigation that makes content connections or serves the next relevant content in chronological order. The current site requires someone to navigate back to the side menu within the current site and choose from multiple categories (upcoming, upcoming SCA, past, past SCA). SCA means nothing to the author of this report and requires more labour than the average visitor needs to browse casually.</p>
             <p>Since a site architecture audit and move to a new CMS represents a major website project initiative (that might also require independent funding), this report focuses on access and specific content based on the current website; however, the CMS and architecture projects have been added to the <a href="#actionItemsWebsite">action item checklist</a>.</p>
             <p>It is recommended that all section landing pages have a short how-to-use paragraph drafted and made available, either via a show/hide link, a separate page, or an accessible modal pop-up. How-to pages can help anyone struggling to use the site and provide insight from the staff who are more familiar with the information and purpose of the page. Here, quick visual descriptions can be shared. If Deaf participation becomes a priority for SFU Galleries, it is also a good place for an ASL video primer to help navigate the site. Specific details on what would be helpful in how-to pages are recommended below.</p>
@@ -2034,24 +2035,9 @@
             <br />
         <!--END CHAPTER 5-Case Studies-->
         </section>
-        <section><!--Chapter 6-Master Action Items List-->
-            <a name="actionItemsMaster">
-                <h2>6. Action Items, Master</h4>
-            </a>
-            <P>MEGA COPY PASTE HERE - END TASK</P>
-            <li>Upgrade to the vault, BC Arts Council, Arts Infracture Program, Captial Improvements</li>
-            <br />
-            <br />
-            <a href="#actionItemsMaster" id="skipJumpChptTop"><span style="font-size: xx-large;" aria-hidden="true">&#8613;</span>Jump back to the top of section 6: Master Checklist.</a>
-            <br />
-            <a href="#TOC"id="skipJumpTop"><span style="font-size: xx-large;" aria-hidden="true">&#8607;</span>Jump back to the Table of Contents.</a>
-            <br />
-            <br />
-        <!--END CHAPTER 6-Master List-->
-        </section>
-        <section><!--Chapter 7-Conclusion-->   
+        <section><!--Chapter 6-Conclusion-->   
             <a name="conclusion">
-                <h2>7. Conclusion</h4>
+                <h2>6. Conclusion</h4>
             </a>
             <p>This report has been built from a review based on a specific moment in time, designed to identify needs that can be addressed in the immediate future to better serve SFU Gallery staff, artists, and audiences. A new museum will be built in the coming years, and technology will not stand-still. This report is designed to bridge a gap and assist with current programs and procedures, while providing insight into the how and why of digital accessibility so that it can inform future decisions.</p>
             <p>It is the recommendation of this author that two resources be consulted and be brought into the onboarding process for <em>all</em> SFU Galleries staff, but <em>especially</em> those who will be working with the public and online content. These resources are updated regularly, and are primers to help build understanding of the challenges faced by those living with Disabilities and d/Deafness. By always designing digital strategies around those with the most needs, we shift the attention away from the non-Disabled majorities for efficiency, and instead plan in accessibility from the beginning to prioritize inclusion and care.</p>
@@ -2082,7 +2068,7 @@
             </section>
             <br />
             <br />
-            <a href="#conclusion" id="skipJumpChptTop"><span style="font-size: xx-large;" aria-hidden="true">&#8613;</span>Jump back to the top of section 7: Conclusion.</a>
+            <a href="#conclusion" id="skipJumpChptTop"><span style="font-size: xx-large;" aria-hidden="true">&#8613;</span>Jump back to the top of section 6: Conclusion.</a>
             <br />
             <a href="#TOC"id="skipJumpTop"><span style="font-size: xx-large;" aria-hidden="true">&#8607;</span>Jump back to the Table of Contents.</a>
             <br />
