@@ -11,7 +11,6 @@ In 2023, SFU Galleries engaged an external consultant to review their digital la
 [Back to top - quick link](#top)
 
 ## License
--------
 
 SFU Galleries Digital Needs Assessment, 2023 © 2023 by Kay Slater is licensed under Creative Commons Attribution-NonCommercial 4.0 International
 
